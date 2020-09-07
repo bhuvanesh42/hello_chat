@@ -12,7 +12,7 @@ class AuthScreen extends StatelessWidget {
             padding: EdgeInsets.all(10),
             child: Text('hello chat..'),
           ),
-          itemCount: 5,
+          itemCount: 10,
         ));
   }
 }
