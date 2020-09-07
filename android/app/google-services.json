@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "418263677211",
+    "firebase_url": "https://hello-chat-5bd5b.firebaseio.com",
+    "project_id": "hello-chat-5bd5b",
+    "storage_bucket": "hello-chat-5bd5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418263677211:android:3e27164825a700acf4fbbe",
+        "android_client_info": {
+          "package_name": "com.example.hello_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418263677211-3e9jt6bg71hmrra3024vnd3up0j5ods0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYKc1J4fqldMLlR1IknBhHn5FdMz-5-x0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418263677211-3e9jt6bg71hmrra3024vnd3up0j5ods0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
