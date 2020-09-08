@@ -13,13 +13,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
-       
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        backgroundColor: Colors.blue,
+        buttonTheme: ButtonTheme.of(context).copyWith(
+            buttonColor: Colors.blue,
+            textTheme: ButtonTextTheme.primary,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10))),
       ),
-      home: ChatScreen(),
+      home: AuthScreen(),
     );
   }
 }
-
