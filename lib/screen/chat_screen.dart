@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:hello_chat/wedget/chat/messages.dart';
+import 'package:hello_chat/wedget/chat/new_message.dart';
 
 class ChatScreen extends StatelessWidget {
   @override
@@ -32,38 +33,23 @@ class ChatScreen extends StatelessWidget {
                 FirebaseAuth.instance.signOut();
               }
             },
-            icon: Icon(Icons.more_vert,color: Colors.white,),
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.white,
+            ),
           )
         ],
       ),
-      body: StreamBuilder(
-        stream: Firestore.instance
-            .collection('chats/TavZL9vd0sncPtHNrIaN/messages')
-            .snapshots(),
-        builder: (ctx, streamsnapshot) {
-          if (streamsnapshot.connectionState == ConnectionState.waiting) {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-          final documents = streamsnapshot.data.documents;
-          return ListView.builder(
-            itemBuilder: (ctx, index) => Container(
-              padding: EdgeInsets.all(10),
-              child: Text(documents[index]['text']),
-            ),
-            itemCount: documents.length,
-          );
-        },
+      body: Container(
+        child: Column(
+          children: <Widget> [
+            Expanded(child: Message(),),
+            NewMessage(),
+          ],
+          
+        ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Firestore.instance
-              .collection('chats/TavZL9vd0sncPtHNrIaN/messages')
-              .add({'text': 'this is added by pressing button'});
-        },
-        child: Icon(Icons.add),
-      ),
+     
     );
   }
 }

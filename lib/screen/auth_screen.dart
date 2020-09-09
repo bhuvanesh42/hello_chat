@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hello_chat/wedget/auth.dart';
+import 'package:hello_chat/wedget/auth/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -15,7 +15,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   void _submitauthform(String mail, String username, String password,
       bool islogin, BuildContext ctx) async {
-    AuthResult authResult;
+     AuthResult authResult;
     try {
       setState(() {
         _isloading = true;
